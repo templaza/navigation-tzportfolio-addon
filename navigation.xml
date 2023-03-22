@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="tz_portfolio_plus-plugin" group="content" method="upgrade">
+    <name>plg_content_navigation</name>
+    <author>TemPlaza</author>
+    <creationDate>March 2023</creationDate>
+    <copyright>Copyright (C) 2023 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@templaza.com</authorEmail>
+    <authorUrl>www.tzportfolio.com</authorUrl>
+    <version>1.0.2</version>
+    <description>PLG_CONTENT_NAVIGATION_XML_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="navigation">navigation.php</filename>
+        <filename>index.html</filename>
+        <filename>controller.php</filename>
+        <folder>controllers</folder>
+        <folder>css</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field type="list" name="navigation_article_in"
+                       default="0"
+                       label="PLG_CONTENT_NAVIGATION_ARTICLE_IN_LABEL"
+                       description="PLG_CONTENT_NAVIGATION_ARTICLE_IN_DESC">
+                    <option value="0">PLG_CONTENT_NAVIGATION_MAIN_ONLY_MAIN_CATEGORY</option>
+                    <option value="1">PLG_CONTENT_NAVIGATION_MAIN_SECONDARY_CATEGORIES</option>
+                </field>
+                <field type="radio" name="show_title"
+                       default="1" class="switcher btn-group btn-group-yesno"
+                       label="PLG_CONTENT_NAVIGATION_CONTENT_SHOW_TITLE_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_navigation_text"
+                       default="1" class="switcher btn-group btn-group-yesno"
+                       label="PLG_CONTENT_NAVIGATION_CONTENT_SHOW_NAVIGATION_TEXT_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_media"
+                       default="1" class="switcher btn-group btn-group-yesno"
+                       label="PLG_CONTENT_NAVIGATION_CONTENT_SHOW_MEDIA_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="text" name="media_prefix" showon="show_media!:"
+                       label="PLG_CONTENT_NAVIGATION_CONTENT_MEDIA_PREFIX_LABEL"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
