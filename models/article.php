@@ -254,7 +254,7 @@ class PlgTZ_Portfolio_PlusContentNavigationModelArticle extends TZ_Portfolio_Plu
         switch ($type) {
             case 'image' :
                 $image_url_ext = File::getExt($media -> image -> url);
-                $size = $prefix;
+                $size = $prefix ? $prefix : 'o';
                 $image_url = str_replace('.' . $image_url_ext, '_' . $size . '.'
                     . $image_url_ext, $media -> image -> url);
 
